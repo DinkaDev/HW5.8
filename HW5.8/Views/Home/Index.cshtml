@@ -1,0 +1,27 @@
+﻿@model HW5._8.Models.Registration
+
+<h2>Registration Form</h2>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post)){
+    <div>
+        <label>First Name</label>
+        @Html.TextBoxFor(model => model.FirstName)
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
+    <div>
+        <label>Last Name</label>
+        @Html.TextBoxFor(model => model.LastName)
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
+    <div>
+        <label>Email</label>
+        @Html.TextBoxFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    <div>
+        <label>Desired Date</label>
+        @Html.TextBoxFor(model => model.DesiredDate)
+        @Html.ValidationMessageFor(model => model.DesiredDate)
+    </div>
+    <button>Registration</button>
+}
